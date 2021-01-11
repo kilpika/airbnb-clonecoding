@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 pillow = "*"
 django-countries = "*"
+django-seed = "*"
+django = "==2.2.5"
 
 [dev-packages]
 
