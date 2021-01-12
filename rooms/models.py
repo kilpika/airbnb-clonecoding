@@ -76,14 +76,14 @@ class Room(core_models.TimeStampedModel):
         if len(all_reviews) > 0:
             for review in all_reviews:
                 all_ratings += review.rating_average()
-            return all_ratings / len(all_reviews)
+            return round(all_ratings / len(all_reviews))
         return 0
 class Photo(core_models.TimeStampedModel):
     """ Photo Model Definition """
     
     caption = models.CharField(max_length=80)
     file = models.ImageField(upload_to="room_photos")
-    room = models.ForeignKey(Room, related_name="photos", on_delete=models.CASCADE)
+    room = models.ForeignKey("Room", related_name="photos", on_delete=models.CASCADE)
     
     def __str__(self):
         return self.caption    
