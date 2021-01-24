@@ -9,6 +9,7 @@ django-countries = "*"
 django-seed = "*"
 django = "==2.2.5"
 django-country = "*"
+django-dotenv = "*"
 
 [dev-packages]
 
