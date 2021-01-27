@@ -1,0 +1,23 @@
+{
+  "name": "airbnb-clonecoding",
+  "version": "1.0.0",
+  "description": "Django, python",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kilpika/airbnb-clonecoding.git"
+  },
+  "scripts": {
+    "css": "gulp"
+  },
+  "homepage": "https://github.com/kilpika/airbnb-clonecoding#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.5",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1",
+    "tailwindcss": "^1.5.2"
+  },
+  "dependencies": {}
+}

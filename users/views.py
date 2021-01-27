@@ -6,7 +6,6 @@ from django.urls import reverse_lazy
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth import authenticate, login, logout
 from django.core.files.base import ContentFile
-from django.contrib.auth.forms import UserCreationForm
 from . import forms, models
 
 # Create your views here.
@@ -124,6 +123,7 @@ def kakao_callback(request):
         access_token = token_json.get("access_token")
         profile_request = requests.get("https://kapi.kakao.com/v2/user/me", headers={"Authorization": f"Bearer {access_token}"},)
         profile_json = profile_request.json()
+        print(profile_request.json())
         email = profile_json.get("kakao_account").get("email")
         if email is None:
             raise KakaoException
